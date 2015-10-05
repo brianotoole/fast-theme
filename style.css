@@ -5859,3 +5859,6 @@ pre {
     color: white; }
     .btn.color2:hover {
       background-color: #090909; }
+
+#instantclick-bar {
+  background: red; }

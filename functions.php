@@ -91,7 +91,16 @@ function fast_scripts() {
 	wp_enqueue_script( 'fast-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '1.0.0', true );
 
 	//LOAD fast-skip-link-focus.js via filesystem
-	wp_enqueue_script( 'fast-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '1.0.0', true );
+	//wp_enqueue_script( 'fast-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '1.0.0', true );
+	
+	//LOAD instantclick.js via CDN JS
+	wp_enqueue_script( 'fast-instantclick', 'https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.min.js', array(), '1.0.0', true );
+	//CALL instant click into end of footer scripts, for init
+	function call_instant_click() {
+		echo '<script data-no-instant>InstantClick.init();</script>';
+	}
+	add_action('wp_footer', 'call_instant_click', 200); //load at end
+	
 	
 	//IF IS singlular & comments are enabled, load comment-reply.js via filesystem
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
