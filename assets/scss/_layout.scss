@@ -1,4 +1,4 @@
-/* Wrappers */
+// Layout & wrappers
 .wrapper {
     transition: all 0.4s ease;
     @include breakpoint(sm) { 
@@ -7,7 +7,7 @@
     
     &.toggled {
 	    padding-left: 250px;
-	   	@include breakpoint(sm) { //sm = above 768 (see main.scss for mixin details)
+	   	@include breakpoint(sm) { //sm = above 768 (see style.scss for mixin details)
 		   	padding-left: 0
 		}
 	    
@@ -57,7 +57,7 @@
 }
 
 
-/* Sidebar */
+// Sidebar Navigation
 .sidebar-nav {
     position: absolute;
     top: 0;
@@ -109,27 +109,10 @@
     }
 }
 
-/* Navigation */
+// Menu toggle
 .menu-toggle {
 	@include breakpoint(sm) { 
 		display: none;
-	}
-}
-
-/* Colors */
-.swatch {
-	display: inline-block;
-	width: 100px;
-	height: 100px;
-	border-radius: 4px;
-	&.color1 {
-		background-color: $color1;
-	}
-	&.color2 {
-		background-color: $color2;
-	}
-	&.color3 {
-		background-color: $color3;
 	}
 }
 
@@ -152,31 +135,6 @@ pre {
 		border: 0;
 	}
 }
-
-.btn {
-    transition: all 0.4s ease;
-    
-	&.transparent {
-		background-color: transparent;
-		color: $black;
-		border-color: $black;
-	}
-	&.color1 {
-		background-color: $color1;
-		color: white;
-		&:hover {
-			background-color: darken($color1,10%);
-		}
-	}
-	&.color2 {
-		background-color: $color2;
-		color: white;
-		&:hover {
-			background-color: darken($color2,10%);
-		}
-	}
-	
-}//.btn
 
 // Instant Click bar in header, color
 #instantclick-bar {

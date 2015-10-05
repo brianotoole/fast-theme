@@ -5719,7 +5719,23 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-/* Wrappers */
+.btn {
+  transition: all 0.4s ease; }
+  .btn.transparent {
+    background-color: transparent;
+    color: #222;
+    border-color: #222; }
+  .btn.color1 {
+    background-color: #111;
+    color: white; }
+    .btn.color1:hover {
+      background-color: black; }
+  .btn.color2 {
+    background-color: #222;
+    color: white; }
+    .btn.color2:hover {
+      background-color: #090909; }
+
 .wrapper {
   transition: all 0.4s ease; }
   @media (min-width: 768px) {
@@ -5766,7 +5782,6 @@ button.close {
       padding: 20px;
       position: relative; } }
 
-/* Sidebar */
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -5806,23 +5821,9 @@ button.close {
         color: white;
         background: none; }
 
-/* Navigation */
 @media (min-width: 768px) {
   .menu-toggle {
     display: none; } }
-
-/* Colors */
-.swatch {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  border-radius: 4px; }
-  .swatch.color1 {
-    background-color: #111; }
-  .swatch.color2 {
-    background-color: #222; }
-  .swatch.color3 {
-    background-color: #333; }
 
 .pre,
 pre {
@@ -5842,23 +5843,6 @@ pre {
     white-space: pre;
     background: transparent;
     border: 0; }
-
-.btn {
-  transition: all 0.4s ease; }
-  .btn.transparent {
-    background-color: transparent;
-    color: #222;
-    border-color: #222; }
-  .btn.color1 {
-    background-color: #111;
-    color: white; }
-    .btn.color1:hover {
-      background-color: black; }
-  .btn.color2 {
-    background-color: #222;
-    color: white; }
-    .btn.color2:hover {
-      background-color: #090909; }
 
 #instantclick-bar {
   background: red; }

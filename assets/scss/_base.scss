@@ -1,0 +1,28 @@
+// Typography
+// typograhy styles here
+
+// Buttons
+.btn {
+    transition: all 0.4s ease;
+    
+	&.transparent {
+		background-color: transparent;
+		color: $black;
+		border-color: $black;
+	}
+	&.color1 {
+		background-color: $color1;
+		color: white;
+		&:hover {
+			background-color: darken($color1,10%);
+		}
+	}
+	&.color2 {
+		background-color: $color2;
+		color: white;
+		&:hover {
+			background-color: darken($color2,10%);
+		}
+	}
+	
+}//.btn
