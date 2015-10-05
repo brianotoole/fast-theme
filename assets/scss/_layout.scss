@@ -1,0 +1,179 @@
+/* Wrappers */
+.wrapper {
+    transition: all 0.4s ease;
+    @include breakpoint(sm) { 
+    	padding-left: 250px;
+	}
+    
+    &.toggled {
+	    padding-left: 250px;
+	   	@include breakpoint(sm) { //sm = above 768 (see main.scss for mixin details)
+		   	padding-left: 0
+		}
+	    
+	    .sidebar-wrapper {
+	        width: 250px;
+		    @include breakpoint(sm) { 
+		   		width: 0;
+		   	}
+	    }
+	    
+	    .page-content-wrapper {
+		    position: absolute;
+			margin-right: -250px;
+			 @include breakpoint(sm) { 
+			     position: relative;
+			 	 margin-right: 0;
+			 }
+	    }
+    }//&.toggled
+    
+}//.wrapper
+
+.sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: $black;
+    transition: all 0.4s ease;
+    @include breakpoint(sm) { 
+		width: 250px;
+	}
+}
+
+.page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+    
+    @include breakpoint(sm) { 
+		 padding: 20px;
+         position: relative;
+	}
+}
+
+
+/* Sidebar */
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    ul {
+    	margin: 0;
+    	padding: 0;
+	    list-style-type: none;
+    }
+    li {
+   	 	line-height: 40px;	
+   	 	text-indent: 20px;
+   	 	
+   	 	&:first-child {
+   	 		padding-top: 15px;
+	   	 	@include breakpoint(sm) { 
+	   	 		padding-top: 75px;
+	   	 	}
+   	 	} 
+   	 	
+   	 	a {
+	   	 	display: block;
+	   	 	text-decoration: none;
+	   	 	color: $gray;
+	   	 	&:hover {
+		   		text-decoration: none;
+		   		color: white;	
+		   		background: darken($gray,5%);
+	   	 	}
+	   	 	&:active, &:focus {
+		   	 	text-decoration: none;
+	   	 	}
+   	 	}   
+    }
+    > .sidebar-brand {
+    	height: 65px;
+	  	font-size: 18px;
+	  	line-height: 60px;	
+	  	a {
+			color: $gray;	
+			&:hover {
+				color: white;
+				background: none;
+			}
+	  	}    
+    }
+}
+
+/* Navigation */
+.menu-toggle {
+	@include breakpoint(sm) { 
+		display: none;
+	}
+}
+
+/* Colors */
+.swatch {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border-radius: 4px;
+	&.color1 {
+		background-color: $color1;
+	}
+	&.color2 {
+		background-color: $color2;
+	}
+	&.color3 {
+		background-color: $color3;
+	}
+}
+
+.pre, 
+pre {
+	padding: 10px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.5;
+	background-color: $lightgray;
+	border: none;
+	border-radius: 4px;
+	> code {
+		padding: 0;
+		margin: 0;
+		font-size: 100%;
+		word-break: normal;
+		white-space: pre;
+		background: transparent;
+		border: 0;
+	}
+}
+
+.btn {
+    transition: all 0.4s ease;
+    
+	&.transparent {
+		background-color: transparent;
+		color: $black;
+		border-color: $black;
+	}
+	&.color1 {
+		background-color: $color1;
+		color: white;
+		&:hover {
+			background-color: darken($color1,10%);
+		}
+	}
+	&.color2 {
+		background-color: $color2;
+		color: white;
+		&:hover {
+			background-color: darken($color2,10%);
+		}
+	}
+	
+}//.btn
