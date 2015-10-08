@@ -36,15 +36,15 @@
 	    </div> 
 	    <div class="user">
 		  <div class="row">
-		    <div class="col-sm-4 avatar">
-		    	<a class="" href="#">[username]</a>
-		    </div><!--/.avatar-->
-		    <div class="col-sm-4 settings">
-		    	<a href="#">Settings</a>
-		    </div><!--/.settings-->
-		    <div class="col-sm-4 auth">
-		    	<a class="log-in" href="#">Log In</a>
-		    </div><!--/.auth -->
+		
+	        <?php
+				if ( is_user_logged_in() ) {
+				     wp_nav_menu( array( 'theme_location' => 'logged-in-menu') );
+				} else {
+				     wp_nav_menu( array( 'theme_location' => 'logged-out-menu') );
+				}
+		    ?>
+         
 		  </div><!--/.row -->
 	    </div><!--/.user -->
 	  </div><!--/.container-fluid -->
