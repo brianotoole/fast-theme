@@ -5730,10 +5730,10 @@ body {
     color: #323538;
     border-color: #323538; }
   .btn.color1 {
-    background-color: #111;
+    background-color: #84bd00;
     color: white; }
     .btn.color1:hover {
-      background-color: black; }
+      background-color: #608a00; }
   .btn.color2 {
     background-color: #222;
     color: white; }
@@ -5744,20 +5744,20 @@ body {
   transition: all 0.4s ease; }
   @media (min-width: 768px) {
     .wrapper {
-      padding-left: 250px; } }
+      padding-left: 125px; } }
   .wrapper.toggled {
-    padding-left: 250px; }
+    padding-left: 125px; }
     @media (min-width: 768px) {
       .wrapper.toggled {
         padding-left: 0; } }
     .wrapper.toggled .sidebar-wrapper {
-      width: 250px; }
+      width: 125px; }
       @media (min-width: 768px) {
         .wrapper.toggled .sidebar-wrapper {
           width: 0; } }
     .wrapper.toggled .page-content-wrapper {
       position: absolute;
-      margin-right: -250px; }
+      margin-right: -125px; }
       @media (min-width: 768px) {
         .wrapper.toggled .page-content-wrapper {
           position: relative;
@@ -5766,16 +5766,16 @@ body {
 .sidebar-wrapper {
   z-index: 1000;
   position: fixed;
-  left: 250px;
+  left: 125px;
   width: 0;
   height: 100%;
-  margin-left: -250px;
+  margin-left: -125px;
   overflow-y: auto;
   background: #323538;
   transition: all 0.4s ease; }
   @media (min-width: 768px) {
     .sidebar-wrapper {
-      width: 250px; } }
+      width: 125px; } }
 
 .page-content-wrapper {
   width: 100%;
@@ -5805,6 +5805,17 @@ body {
       @media (min-width: 768px) {
         .sidebar-nav li:first-child {
           padding-top: 75px; } }
+    .sidebar-nav li.current-menu-item {
+      color: white; }
+      .sidebar-nav li.current-menu-item:after {
+        content: '';
+        display: block;
+        position: relative;
+        left: 0;
+        background-color: #84bd00;
+        margin-top: -40px;
+        height: 40px;
+        width: 3px; }
     .sidebar-nav li a {
       display: block;
       text-decoration: none;
@@ -5830,13 +5841,12 @@ body {
 
 .top-bar {
   width: 100%;
-  position: absolute;
+  position: relative;
   padding: 15px;
   background: #26282b; }
   @media (min-width: 768px) {
     .top-bar {
-      padding: 20px;
-      position: relative; } }
+      padding: 20px; } }
   .top-bar .m {
     float: left; }
   .top-bar .menu-toggle {

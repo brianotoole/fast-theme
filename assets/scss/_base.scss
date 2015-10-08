@@ -16,10 +16,10 @@ body {
 		border-color: $black;
 	}
 	&.color1 {
-		background-color: $color1;
+		background-color: $lime;
 		color: white;
 		&:hover {
-			background-color: darken($color1,10%);
+			background-color: darken($lime,10%);
 		}
 	}
 	&.color2 {

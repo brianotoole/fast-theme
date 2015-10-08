@@ -2,17 +2,17 @@
 .wrapper {
     transition: all 0.4s ease;
     @include breakpoint(sm) { 
-    	padding-left: 250px;
+    	padding-left: 125px;
 	}
     
     &.toggled {
-	    padding-left: 250px;
+	    padding-left: 125px;
 	   	@include breakpoint(sm) { //sm = above 768 (see style.scss for mixin details)
 		   	padding-left: 0
 		}
 	    
 	    .sidebar-wrapper {
-	        width: 250px;
+	        width: 125px;
 		    @include breakpoint(sm) { 
 		   		width: 0;
 		   	}
@@ -20,7 +20,7 @@
 	    
 	    .page-content-wrapper {
 		    position: absolute;
-			margin-right: -250px;
+			margin-right: -125px;
 			 @include breakpoint(sm) { 
 			     position: relative;
 			 	 margin-right: 0;
@@ -33,15 +33,15 @@
 .sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: 125px;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -125px;
     overflow-y: auto;
     background: $black;
     transition: all 0.4s ease;
     @include breakpoint(sm) { 
-		width: 250px;
+		width: 125px;
 	}
 }
 
@@ -80,6 +80,19 @@
 	   	 		padding-top: 75px;
 	   	 	}
    	 	} 
+   	 	&.current-menu-item { //active menu item
+   	 		color: white;
+	   	 	&:after { 
+		   		content: '';
+		   	 	display: block;
+		   	 	position: relative;
+		   	 	left: 0;
+		   	 	background-color: $lime;
+		   	 	margin-top: -40px;
+		   	 	height: 40px;
+		   	 	width: 3px;
+	   	 	}
+   	 	}
    	 	
    	 	a {
 	   	 	display: block;
@@ -109,9 +122,6 @@
     }
 }
 
-// Menu toggle
-
-
 // Instant Click bar in header, color
 #instantclick-bar {
 	background: red;
@@ -120,21 +130,19 @@
 // Top Bar
 .top-bar {
 	width: 100%;
-    position: absolute;
+    position: relative;
     padding: 15px;
     background: darken($black,5%);
     
     @include breakpoint(sm) { 
 		 padding: 20px;
-         position: relative;
 	}
 	
 	.m {
 		float: left;
-		
 	}
 	
-	.menu-toggle {
+	.menu-toggle { //menu toggle to trigger sidebar-nav
 		position: relative;
 		z-index: 3001; //always clickable
 		@include breakpoint(sm) { 
