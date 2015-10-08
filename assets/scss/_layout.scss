@@ -6,13 +6,13 @@
 	}
     
     &.toggled {
-	    padding-left: 250px;
+	    padding-left: 200px;
 	   	@include breakpoint(sm) { //sm = above 768 (see style.scss for mixin details)
 		   	padding-left: 0
 		}
 	    
 	    .sidebar-wrapper {
-	        width: 250px;
+	        width: 200px;//same as .toggled padding-left
 		    @include breakpoint(sm) { 
 		   		width: 0;
 		   	}
@@ -38,7 +38,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: $black;
+    background: $main;
     overflow: hidden;
     transition: all 0.4s ease;
     @include breakpoint(sm) { 
@@ -87,7 +87,7 @@
 		   	 	display: block;
 		   	 	position: relative;
 		   	 	left: 0;
-		   	 	background-color: $lime;
+		   	 	background-color: $accent;
 		   	 	margin-top: -40px;
 		   	 	height: 40px;
 		   	 	width: 3px;
@@ -124,7 +124,7 @@
 
 // Instant Click bar in header, color
 #instantclick-bar {
-	background: $lime;
+	background: $accent;
 }
 
 // Top Bar
@@ -132,13 +132,13 @@
 	width: 100%;
     position: relative;
     padding: 15px;
-    background: darken($black,5%);
+    background: darken($main,5%);
     
     @include breakpoint(sm) { 
 		 padding: 20px;
 	}
 	
-	.m {
+	.menu {
 		float: left;
 	}
 	
@@ -150,10 +150,14 @@
 		}
 	}
 	
-	.s {
+	.user {
 		float: right;
 		&:after {
 			clear: both;
 		}
 	}
+}
+
+.logged-in {
+//if logged in...
 }

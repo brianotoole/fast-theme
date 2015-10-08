@@ -31,14 +31,24 @@
     
     <div class="top-bar">
 	  <div class="container-fluid">
-	    <div class="m">
+	    <div class="menu">
 		  <a href="#menu-toggle" class="btn btn-default menu-toggle" id="js-menu-toggle">Menu</a>
 	    </div> 
-	    <div class="s">
-		  search
-	    </div> 
-	  </div>
-    </div>
+	    <div class="user">
+		  <div class="row">
+		    <div class="col-sm-4 avatar">
+		    	<a class="" href="#">[username]</a>
+		    </div><!--/.avatar-->
+		    <div class="col-sm-4 settings">
+		    	<a href="#">Settings</a>
+		    </div><!--/.settings-->
+		    <div class="col-sm-4 auth">
+		    	<a class="log-in" href="#">Log In</a>
+		    </div><!--/.auth -->
+		  </div><!--/.row -->
+	    </div><!--/.user -->
+	  </div><!--/.container-fluid -->
+    </div><!--/.top-bar-->
   </header><!-- #masthead -->
   
   <div id="content" class="site-content">

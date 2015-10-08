@@ -1,6 +1,9 @@
 body {
-	background: lighten($black,5%);
-	color: $gray;
+	background: $white;
+	color: $black;
+}
+a {
+	color: $accent;
 }
 
 // Typography
