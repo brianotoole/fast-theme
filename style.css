@@ -5719,12 +5719,16 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+body {
+  background: #3e4245;
+  color: #999; }
+
 .btn {
   transition: all 0.4s ease; }
   .btn.transparent {
     background-color: transparent;
-    color: #222;
-    border-color: #222; }
+    color: #323538;
+    border-color: #323538; }
   .btn.color1 {
     background-color: #111;
     color: white; }
@@ -5767,7 +5771,7 @@ button.close {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #222;
+  background: #323538;
   transition: all 0.4s ease; }
   @media (min-width: 768px) {
     .sidebar-wrapper {
@@ -5821,28 +5825,27 @@ button.close {
         color: white;
         background: none; }
 
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none; } }
-
-.pre,
-pre {
-  padding: 10px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.5;
-  background-color: #f7f7f7;
-  border: none;
-  border-radius: 4px; }
-  .pre > code,
-  pre > code {
-    padding: 0;
-    margin: 0;
-    font-size: 100%;
-    word-break: normal;
-    white-space: pre;
-    background: transparent;
-    border: 0; }
-
 #instantclick-bar {
   background: red; }
+
+.top-bar {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  background: #26282b; }
+  @media (min-width: 768px) {
+    .top-bar {
+      padding: 20px;
+      position: relative; } }
+  .top-bar .m {
+    float: left; }
+  .top-bar .menu-toggle {
+    position: relative;
+    z-index: 3001; }
+    @media (min-width: 768px) {
+      .top-bar .menu-toggle {
+        display: none; } }
+  .top-bar .s {
+    float: right; }
+    .top-bar .s:after {
+      clear: both; }

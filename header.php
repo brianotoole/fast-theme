@@ -28,7 +28,18 @@
          ) ); ?>
       </nav><!-- .sidebar-nav -->
     </div><!-- /.sidebar-wrapper -->
+    
+    <div class="top-bar">
+	  <div class="container-fluid">
+	    <div class="m">
+		  <a href="#menu-toggle" class="btn btn-default menu-toggle" id="js-menu-toggle">Menu</a>
+	    </div> 
+	    <div class="s">
+		  search
+	    </div> 
+	  </div>
+    </div>
   </header><!-- #masthead -->
   
   <div id="content" class="site-content">
-    <a href="#menu-toggle" class="btn btn-default menu-toggle" id="js-menu-toggle">Menu</a>
+ 
